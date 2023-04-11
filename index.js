@@ -1,62 +1,96 @@
 function App() {
-  const display = () => {};
+  const [expression, setExpression] = React.useState("");
+  const [answer, setAnswer] = React.useState(0);
+
+  const display = (symbol) => {
+    setExpression((prev) => prev + symbol);
+    if (expression[expression.length - 1] == "=") {
+      if (/[1-9.]/.test(symbol)) {
+        setAnswer(symbol);
+      } else {
+        setExpression(answer + symbol);
+      }
+    }
+  };
+
+  const calculate = () => {
+    setAnswer(eval(expression));
+    setExpression((prev) => prev + "=");
+  };
+
+  const allClear = () => {
+    setExpression("");
+    setAnswer(0);
+  };
+  const clear = () => {
+    setAnswer((prev) =>
+      prev
+        .split("")
+        .slice(0, prev.length - 1)
+        .join("")
+    );
+    setAnswer(0);
+  };
 
   return (
     <div className="container">
       <div className="grid">
-        <div onClick={display} className="dis"></div>
-        <div onClick={display} className="padButton AC tomato">
+        <div className="dis">
+          <input type="text" value={expression} palceholder="0" disabled />
+          <div className="total">{answer}</div>
+        </div>
+        <div onClick={allClear} className="padButton AC tomato">
           AC
         </div>
-        <div onClick={display} className="padButton C tomato">
+        <div onClick={clear} className="padButton C tomato">
           C
         </div>
-        <div onClick={display} className="padButton div">
+        <div onClick={() => display("/")} className="padButton div">
           /
         </div>
-        <div onClick={display} className="padButton times">
-          x
+        <div onClick={() => display("*")} className="padButton times">
+          *
         </div>
-        <div onClick={display} className="padButton seven dark-grey">
+        <div onClick={() => display("7")} className="padButton seven dark-grey">
           7
         </div>
-        <div onClick={display} className="padButton eight dark-grey">
+        <div onClick={() => display("8")} className="padButton eight dark-grey">
           8
         </div>
-        <div onClick={display} className="padButton nine dark-grey">
+        <div onClick={() => display("9")} className="padButton nine dark-grey">
           9
         </div>
-        <div onClick={display} className="padButton minus">
+        <div onClick={() => display("-")} className="padButton minus">
           -
         </div>
-        <div onClick={display} className="padButton four dark-grey">
+        <div onClick={() => display("4")} className="padButton four dark-grey">
           4
         </div>
-        <div onClick={display} className="padButton five dark-grey">
+        <div onClick={() => display("5")} className="padButton five dark-grey">
           5
         </div>
-        <div onClick={display} className="padButton six dark-grey">
+        <div onClick={() => display("6")} className="padButton six dark-grey">
           6
         </div>
-        <div onClick={display} className="padButton plus">
+        <div onClick={() => display("+")} className="padButton plus">
           +
         </div>
-        <div onClick={display} className="padButton one dark-grey">
+        <div onClick={() => display("1")} className="padButton one dark-grey">
           1
         </div>
-        <div onClick={display} className="padButton two dark-grey">
+        <div onClick={() => display("2")} className="padButton two dark-grey">
           2
         </div>
-        <div onClick={display} className="padButton three dark-grey">
+        <div onClick={() => display("3")} className="padButton three dark-grey">
           3
         </div>
-        <div onClick={display} className="padButton equal blue">
+        <div onClick={calculate} className="padButton equal blue">
           =
         </div>
-        <div onClick={display} className="padButton zero dark-grey">
+        <div onClick={() => display("0")} className="padButton zero dark-grey">
           0
         </div>
-        <div onClick={display} className="padButton dot dark-grey">
+        <div onClick={() => display(".")} className="padButton dot dark-grey">
           .
         </div>
       </div>
