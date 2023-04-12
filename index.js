@@ -23,7 +23,7 @@ function App() {
     setAnswer(0);
   };
   const clear = () => {
-    setAnswer((prev) =>
+    setExpression((prev) =>
       prev
         .split("")
         .slice(0, prev.length - 1)
