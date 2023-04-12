@@ -35,62 +35,62 @@ function App() {
   return (
     <div className="container">
       <div className="grid">
-        <div className="dis">
+        <div id="display" className="dis">
           <input type="text" value={expression} palceholder="0" disabled />
           <div className="total">{answer}</div>
         </div>
-        <div onClick={allClear} className="padButton AC tomato">
+        <div id="clear" onClick={allClear} className="padButton AC tomato">
           AC
         </div>
         <div onClick={clear} className="padButton C tomato">
           C
         </div>
-        <div onClick={() => display("/")} className="padButton div">
+        <div id="divide" onClick={() => display("/")} className="padButton div">
           /
         </div>
-        <div onClick={() => display("*")} className="padButton times">
+        <div id="multiply" onClick={() => display("*")} className="padButton times">
           *
         </div>
-        <div onClick={() => display("7")} className="padButton seven dark-grey">
+        <div id="seven" onClick={() => display("7")} className="padButton seven dark-grey">
           7
         </div>
-        <div onClick={() => display("8")} className="padButton eight dark-grey">
+        <div id="eight" onClick={() => display("8")} className="padButton eight dark-grey">
           8
         </div>
-        <div onClick={() => display("9")} className="padButton nine dark-grey">
+        <div id="nine" onClick={() => display("9")} className="padButton nine dark-grey">
           9
         </div>
-        <div onClick={() => display("-")} className="padButton minus">
+        <div id="subtract" onClick={() => display("-")} className="padButton minus">
           -
         </div>
-        <div onClick={() => display("4")} className="padButton four dark-grey">
+        <div id="four" onClick={() => display("4")} className="padButton four dark-grey">
           4
         </div>
-        <div onClick={() => display("5")} className="padButton five dark-grey">
+        <div id="five" onClick={() => display("5")} className="padButton five dark-grey">
           5
         </div>
-        <div onClick={() => display("6")} className="padButton six dark-grey">
+        <div id="six" onClick={() => display("6")} className="padButton six dark-grey">
           6
         </div>
-        <div onClick={() => display("+")} className="padButton plus">
+        <div id="add" onClick={() => display("+")} className="padButton plus">
           +
         </div>
-        <div onClick={() => display("1")} className="padButton one dark-grey">
+        <div id="one" onClick={() => display("1")} className="padButton one dark-grey">
           1
         </div>
-        <div onClick={() => display("2")} className="padButton two dark-grey">
+        <div id="two" onClick={() => display("2")} className="padButton two dark-grey">
           2
         </div>
-        <div onClick={() => display("3")} className="padButton three dark-grey">
+        <div id="three" onClick={() => display("3")} className="padButton three dark-grey">
           3
         </div>
-        <div onClick={calculate} className="padButton equal blue">
+        <div id="equals" onClick={calculate} className="padButton equal blue">
           =
         </div>
-        <div onClick={() => display("0")} className="padButton zero dark-grey">
+        <div id="zero" onClick={() => display("0")} className="padButton zero dark-grey">
           0
         </div>
-        <div onClick={() => display(".")} className="padButton dot dark-grey">
+        <div id="decimal" onClick={() => display(".")} className="padButton dot dark-grey">
           .
         </div>
       </div>
