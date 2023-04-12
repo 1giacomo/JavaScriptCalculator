@@ -26,7 +26,7 @@ body {
 }
 .container {
   margin: auto;
-  width: 50%;
+  width: 320px;
   padding: 10px;
   border: 2px solid #1818ec;
   background: black;
