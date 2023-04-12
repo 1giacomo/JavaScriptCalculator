@@ -25,12 +25,13 @@ body {
   background: #c2c2d6;
 }
 .container {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
   border: 2px solid #1818ec;
-  padding: 5px;
   background: black;
-  width: 320px;
   position: relative;
-  padding-top: 100px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
