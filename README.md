@@ -21,4 +21,4 @@ The font used is [Share Tech Mono](https://fonts.googleapis.com/css?family=Share
 
 ## Usage
 
-To use the calculator, simply click on the buttons or use your keyboard to enter numbers and perform calculations.
+To use the calculator, simply click on the buttons to enter numbers and perform calculations.
