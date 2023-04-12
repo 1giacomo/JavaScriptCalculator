@@ -17,7 +17,7 @@ This is a simple calculator built using JavaScript.
 
 ## Retro font
 
-This calculator uses a custom retro font to display the numbers and symbols. This is [Share Tech Mono](https://fonts.google.com/specimen/Share+Tech+Mono).
+The font used is [Share Tech Mono](https://fonts.googleapis.com/css?family=Share+Tech+Mono) from [Google Fonts](https://fonts.google.com/).
 
 ## Usage
 
