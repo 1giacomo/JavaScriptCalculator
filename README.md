@@ -2,7 +2,7 @@
 
 This is a raw Calculator created for the [freeCodeCamp](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-javascript-calculator) course.
 
-You can visit the site by [this link](https://1giacomo.github.io/JavaScriptCalculator/).
+You can visit the site by [🔗 this link](https://1giacomo.github.io/JavaScriptCalculator/).
 
 ## Overview
 
